@@ -1,0 +1,20 @@
+[package]
+name = "codora-web"
+edition = { workspace = true }
+description = "Web development in codora"
+keywords = ["web", "security"]
+categories = ["web-programming"]
+
+
+[dependencies]
+# Local crates
+codora-security = { workspace = true }
+futures-util = "0.3.31"
+http = "1.3.1"
+anyhow = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
+
+[lints]
+workspace = true

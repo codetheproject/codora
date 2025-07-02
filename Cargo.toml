@@ -1,0 +1,40 @@
+[workspace]
+members = ["crates/*"]
+exclude = ["crates/macros"]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+
+
+[workspace.dependencies]
+# Internal crates 
+codora = { path = "./crates/codora" }
+codora-ws = { path = "./crates/codora-ws" }
+codora-orm = { path = "./crates/codora-orm" }
+codora-web = { path = "./crates/codora-web" }
+codora-bot = { path = "./crates/codora-bot" }
+codora-worker = { path = "./crates/codora-worker" }
+codora-bucket = { path = "./crates/codora-bucket" }
+codora-adapter = { path = "./crates/codora-adapter" }
+codora-identity = { path = "./crates/codora-identity" }
+codora-security = { path = "./crates/codora-security" }
+codora-proc-macro = { path = "./crates/codora-proc-macro" }
+codora-notification = { path = "./crates/codora-notification" }
+# External crates
+tracing-subscriber = "0.3.19"
+tokio = "1.47.1"
+tracing = "0.1.41"
+axum = "0.8.4"
+axum-core = "0.5.2"
+anyhow = "1.0.100"
+tower = "0.5.2"
+uuid = "1.17.0"
+serde = "1.0.226"
+serde_json = "1.0.145"
+thiserror = "2.0.16"
+derive_more = "2.0.1"
+error-stack = "0.6.0"
+derive-new = { version = "0.7.0" }
+
+[workspace.lints]

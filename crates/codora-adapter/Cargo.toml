@@ -1,0 +1,25 @@
+[package]
+name = "codora-adapter"
+version = "0.1.0"
+edition = { workspace = true }
+
+[features]
+default = ["axum", "actix"]
+axum = ["dep:axum", "dep:axum-core", "dep:http"]
+actix = []
+
+[dependencies]
+tracing = { workspace = true }
+codora-security = { workspace = true }
+axum = { workspace = true, optional = true }
+axum-core = { workspace = true, optional = true }
+http = { version = "1.3.1", optional = true }
+derive-new = { workspace = true }
+
+
+[dev-dependencies]
+anyhow = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tower = { workspace = true, features = ["full"] }
+tower-http = "0.6.6"
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
